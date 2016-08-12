@@ -1,0 +1,5 @@
+- name: yum update firt
+  raw: yum update -y
+
+- name: Install Docker
+  raw: yum install -y docker

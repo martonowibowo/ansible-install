@@ -1,0 +1,2 @@
+- name: add vhost
+  raw : /usr/sbin/vhostset testing.acomindo.com /opt/public_html/goodsdept
