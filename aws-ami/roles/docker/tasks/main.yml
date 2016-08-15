@@ -3,3 +3,12 @@
 
 - name: Install Docker
   raw: yum install -y docker
+
+- name : install pip for docker-compose
+  raw: yum install -y python-pip
+
+- name: install docker-compose
+  raw : pip install docker-compose
+
+- name: config docker-compose
+  raw : ln -svf /usr/local/bin/docker-compose /usr/sbin/ 
