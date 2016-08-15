@@ -4,3 +4,7 @@
 
 - name : install percona mysql server
   raw  : yum -y install Percona-Server-server-56 
+
+- name : Copy Default my.cnf
+  template: src=my.cnf dest=/etc/my.cnf
+  notify: restart mysql
