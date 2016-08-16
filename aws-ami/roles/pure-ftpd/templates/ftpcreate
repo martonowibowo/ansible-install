@@ -1,0 +1,11 @@
+#!/bin/sh
+
+username="$1"
+folderpath="$2"
+
+useradd ${username}
+sleep 1
+pure-pw useradd ${username} -u ${username} -g ${username} -d ${folderpath}
+sleep 1
+pure-pw mkdb
+service pure-ftpd restart
