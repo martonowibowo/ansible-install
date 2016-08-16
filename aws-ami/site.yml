@@ -10,4 +10,5 @@
    # - php-fpm
    # - vhost
    # - percona
-     - docker
+   # - docker
+     - pure-ftpd 
