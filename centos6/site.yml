@@ -1,14 +1,14 @@
 - name: Install Nginx and PHP-FPM
-  hosts: dev-server
+  hosts: adira
   remote_user: root
   become: yes
   become_method: sudo
 
   roles:
-   #- common
-   #- nginx
-    - php-fpm
+   - common
+   - nginx
+   - php-fpm
    #- vhost
-   # - percona
+   #- percona
    #- pagespeed
-    - gruntbower
+   - gruntbower
