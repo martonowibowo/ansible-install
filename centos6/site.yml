@@ -5,10 +5,10 @@
   become_method: sudo
 
   roles:
-   #- common
-   # - nginx
+   - common
+   - nginx
    # - php-fpm
-   # - vhost
+   - vhost
    # - percona
-   # - pagespeed
+   - pagespeed
    # - bowergrunt
