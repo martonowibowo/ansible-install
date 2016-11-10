@@ -1,4 +1,10 @@
 ---
+- name: socat depedencies
+  raw : rpm -Uhv http://dl.iuscommunity.org/pub/ius/stable/Redhat/6/x86_64/epel-release-6-5.noarch.rpm
+
+- name: install socat rpm packages
+  raw : yum -y install socat
+
 - name: download percona repo
   raw : yum -y install http://www.percona.com/downloads/percona-release/redhat/0.1-3/percona-release-0.1-3.noarch.rpm
 

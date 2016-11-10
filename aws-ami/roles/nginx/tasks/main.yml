@@ -1,13 +1,4 @@
 ---
-- name: Copy Nginx repository definition
-  template: src=nginx.repo dest=/etc/yum.repos.d/nginx.repo
-
-- name: download import key
-  get_url: url=http://nginx.org/keys/nginx_signing.key dest=/tmp/nginx_signing.key
-
-- name: import key
-  rpm_key: state=present key=/tmp/nginx_signing.key
-
 - name: Install nginx
   yum: name=nginx state=latest
 
