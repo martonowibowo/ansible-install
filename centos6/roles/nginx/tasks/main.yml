@@ -9,7 +9,7 @@
   rpm_key: state=present key=/tmp/nginx_signing.key
 
 - name: Install nginx
-  yum: name=nginx state=latest
+  raw: yum install -y nginx-1.11.5
 
 - name: Create folder sites-available
   raw : mkdir -p /etc/nginx/sites-available
