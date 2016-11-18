@@ -5,10 +5,9 @@
   become_method: sudo
 
   roles:
-   #- common
-   # - nginx
-   # - php-fpm
-   # - vhost
+   - common
+   - nginx
+   - php-fpm
    # - percona
    # - docker
-     - pure-ftpd 
+   #  - pure-ftpd 

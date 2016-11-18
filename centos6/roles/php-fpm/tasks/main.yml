@@ -6,7 +6,7 @@
   yum: name=https://mirror.webtatic.com/yum/el6/latest.rpm state=present
 
 - name: install php56w-fpm
-  raw : yum install -y php56w-fpm php56w-mbstring php56w-mysql php56w-pdo php56w-mcrypt php56w-cli php56w-pecl-apcu php56w-soap php56w-pear php56w-xml php56w-xmlrpc
+  raw : yum install -y php56w-fpm php56w-mbstring php56w-gd php56w-mysql php56w-pdo php56w-mcrypt php56w-cli php56w-pecl-apcu php56w-soap php56w-pear php56w-xml php56w-xmlrpc
   notify: restart php-fpm
 
 - name: Copy default www.conf

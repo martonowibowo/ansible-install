@@ -4,6 +4,3 @@
 
 - name: Install git
   yum: name=git state=present
-
-- name: Install htop
-  yum: name=htop state=present

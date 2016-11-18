@@ -1,0 +1,15 @@
+---
+- name: install npm and nodejs
+  raw : yum install -y gcc-c++ make
+
+- name: install npm and nodejs
+  raw : curl -sL https://rpm.nodesource.com/setup_6.x | sudo -E bash -
+
+- name: install npm and nodejs
+  raw : yum -y install nodejs
+
+- name: install grunt
+  raw : npm install -g grunt
+
+- name: install bower
+  raw : npm install -g bower

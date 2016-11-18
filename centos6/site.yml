@@ -5,9 +5,11 @@
   become_method: sudo
 
   roles:
-   #- common
-   # - nginx
-   # - php-fpm
-   # - vhost
-   # - percona
-    - pagespeed
+   - common
+   - nginx
+   - php-fpm
+   - vhost
+   - percona
+   #- pagespeed
+   - gruntbower
+   # - percona-cluster
