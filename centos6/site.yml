@@ -6,10 +6,10 @@
 
   roles:
    - common
-   - nginx
-   - php-fpm
-   - vhost
+#   - nginx
+#   - php-fpm
+#   - vhost
    - percona
    #- pagespeed
-   - gruntbower
+#   - gruntbower
    # - percona-cluster
