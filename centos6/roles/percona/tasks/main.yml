@@ -7,4 +7,3 @@
 
 - name : Copy Default my.cnf
   template: src=my.cnf dest=/etc/my.cnf
-  notify: restart mysql

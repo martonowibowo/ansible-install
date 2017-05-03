@@ -1,15 +1,17 @@
 - name: Install Nginx and PHP-FPM
-  hosts: dev-server
+  hosts: 
+        - dev-server
   remote_user: root
   become: yes
   become_method: sudo
 
   roles:
-   - common
-   - nginx
-   - php-fpm
-   - vhost
-   - percona
-   #- pagespeed
-   - gruntbower
-   # - percona-cluster
+#    - common
+#   - nginx
+#   - php-fpm
+#   - vhost
+#   - percona
+#   - pagespeed
+    - opcache 
+  # - gruntbower
+  #  - percona-cluster
