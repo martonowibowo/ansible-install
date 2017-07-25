@@ -7,11 +7,11 @@
 
   roles:
 #    - common
-#   - nginx
-#   - php-fpm
-#   - vhost
-#   - percona
-#   - pagespeed
-    - opcache 
-  # - gruntbower
+#    - nginx
+#    - php-fpm
+#    - vhost
+#    - percona
+   - pagespeed
+#    - opcache 
+#    - gruntbower
   #  - percona-cluster
