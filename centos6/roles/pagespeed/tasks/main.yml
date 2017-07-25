@@ -1,7 +1,4 @@
 ---
-- name: Copy Nginx Pagespeed for compile
-  raw : wget http://ho.acomindo.com:9091/nginx-1.11.5.tar.gz
-
 - name: Install Depedencies Package
   raw : yum -y install gcc-c++ pcre-devel pcre-devel zlib-devel make unzip openssl-devel
 
@@ -17,11 +14,11 @@
 - name: Add this before run compile nginx
   raw : PS_NGX_EXTRA_FLAGS="--with-cc=/opt/rh/devtoolset-2/root/usr/bin/gcc"
  
-- name: extract nginx pagespeed
-  raw : tar zxvf nginx-1.11.5.tar.gz
-
 - name: add compile.sh
   template: src=compile.sh dest=~/compile.sh 
+
+- name: extract nginx pagespeed
+  raw : tar zxvf nginx-1.11.5.tar.gz
 
 - name: compile pagespeed 
   raw : chmod +x compile.sh && ./compile.sh

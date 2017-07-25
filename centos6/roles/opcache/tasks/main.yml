@@ -1,6 +1,6 @@
 ---
 - name: Install php56w-opcache
-  yum: name=php56-opcache state=present
+  yum: name=php56w-opcache state=present
 
 - name : Copy Default opcache.ini
   template: src=opcache.ini dest=/etc/php.d/
