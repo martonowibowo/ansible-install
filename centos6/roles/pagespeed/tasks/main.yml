@@ -15,10 +15,13 @@
   raw : PS_NGX_EXTRA_FLAGS="--with-cc=/opt/rh/devtoolset-2/root/usr/bin/gcc"
  
 - name: add compile.sh
-  template: src=compile.sh dest=~/compile.sh 
+  template: src=compile-pagespeed-http2-geoip dest=~/compile-pagespeed-http2-geoip 
 
 - name: extract nginx pagespeed
-  raw : tar zxvf nginx-1.11.5.tar.gz
+  raw : tar zxvf nginx-1.11.5-pagespeed-geoip-http2.tar.gz
+
+- name: install geoip
+  raw : yum install -y geoip geoip-devel
 
 - name: compile pagespeed 
-  raw : chmod +x compile.sh && ./compile.sh
+  raw : chmod +x compile-pagespeed-http2-geoip && ./compile-pagespeed-http2-geoip
