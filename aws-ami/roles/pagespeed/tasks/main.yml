@@ -1,0 +1,21 @@
+---
+- name: Install Depedencies Package
+  raw : yum -y install gcc-c++ pcre-devel pcre-devel zlib-devel make unzip openssl-devel
+
+- name: Package for GCC Compile pagespeed
+  raw : rpm --import https://linux.web.cern.ch/linux/scientific6/docs/repository/cern/slc6X/i386/RPM-GPG-KEY-cern
+
+- name: Package for GCC Compile pagespeed
+  raw : wget -O /etc/yum.repos.d/slc6-devtoolset.repo https://linux.web.cern.ch/linux/scientific6/docs/repository/cern/devtoolset/slc6-devtoolset.repo
+
+- name: add compile.sh
+  template: src=compile-pagespeed-http2-geoip dest=~/compile-pagespeed-http2-geoip 
+
+- name: extract nginx pagespeed
+  raw : tar zxvf nginx-1.11.5-pagespeed-geoip-http2.tar.gz
+
+- name: install geoip
+  raw : yum install -y geoip geoip-devel
+
+- name: compile pagespeed 
+  raw : chmod +x compile-pagespeed-http2-geoip && ./compile-pagespeed-http2-geoip

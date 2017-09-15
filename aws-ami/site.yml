@@ -1,13 +1,15 @@
 - name: Install Nginx and PHP-FPM
   hosts: dev-server
-  remote_user: ec2-user
+  remote_user: root
   become: yes
   become_method: sudo
 
   roles:
-   - common
-   - nginx
-   - php-fpm
+#   - common
+#   - nginx
+#   - php-fpm
+  # - pagespeed
+    - gruntbower
    # - percona
    # - docker
    #  - pure-ftpd 
