@@ -1,0 +1,9 @@
+---
+- name: Install pure-ftpd
+  raw: yum --enablerepo="epel" install -y pure-ftpd
+
+- name: Add Default config with PassivePort
+  template: src=pure-ftpd.conf dest=/etc/pure-ftpd/pure-ftpd.conf
+
+- name: Add FTP Add script
+  template: src=ftpcreate dest=/usr/sbin/ftpcreate
