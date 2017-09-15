@@ -13,4 +13,5 @@
    # - percona
    # - docker
    #  - pure-ftpd 
-   - opcache
+   # - opcache
+   - php-fpm70
