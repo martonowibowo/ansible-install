@@ -1,7 +1,4 @@
 ---
-- name : add repo first
-  yum: name=http://dl.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm state=present
-
 - name : add repo second
   yum: name=https://mirror.webtatic.com/yum/el6/latest.rpm state=present
 
